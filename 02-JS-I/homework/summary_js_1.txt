@@ -1,0 +1,9 @@
+	* Variables: es un espacio específico en la memoria de un sistema en el que se almacenan datos, a los cuales se accede mediante un nombre identidicador. Tanto el dato como el nombre quedan asignados en la declaración de dicha variable. Por ejemplo: x = 1, h = 'hello world!', t = true, etc.
+
+	* Strings: es un tipo de dato que se compone por conjuntos ordenados de caracteres, ya sean letras, números, signos y símbolos especiales. Para identificar este tipo de datos, se debe incluir comillas (simples o dobles) alrededor del dato en ccuestió. Por ejemplo: "hola", "123", "", etc.
+
+	* Funciones (argumentos, `return`): una función es una secuencia de líneas de código que realiza una tarea específica. Las funciones pueden definirse de forma tal que reciban uno o más datos para su ejecución, estos se llaman argumentos. A su vez, las funciones pueden devolver algún tipo de dato al finalizar su ejecución, mediante la expresión 'return', seguida del tipo de dato que se quiera arrojar. Este bloque de código puede ser ejecutado desde otras partes del programa tantas veces como resulte necesario. 
+
+	* Declaraciones `if`: la expresión 'if' permite evaluar una sentencia condicional: si una condición dada es verdadera, ejecutará un bloque de código. De lo contrario, pueden ejecutarse otras sentencias.
+
+	* Valores booleanos (`true`, `false`): los valores booleanos son tipos de datos que operan en una lógica binaria tal que sólo aceptan dos valores, verdadero o falso, siendo ambas expresiones opuestas entre sí. 
