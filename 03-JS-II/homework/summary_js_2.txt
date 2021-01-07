@@ -1,0 +1,8 @@
+* 'for': expresión que se utiliza para iterar sobre elementos en una sentencia de programación. Permite ejecutar y manipular indefinidas veces una operación o un valor.
+
+* '&&': operador lógico binario de conjunción. Esta expresión pone en relación dos conjuntos asignandole valor verdadero (true), si y solo si se cumplen ambos disyuntos a la vez, en el caso contrario, la expresión devuelve un valor falso. Es decir, al igual que las conectivas lógicas de la lógica clásica, este operador devuelve un tipo de dato booleano (true o false).
+
+* '||': operador lógico binario de disyunción. Esta expresión pone en relación dos conjuntos asignandole valor verdadero (true), si y solo si se cumple al menos uno de sus disyuntos, en el caso contrario, la expresión devuelve un valor falso. Es decir, al igual que las conectivas lógicas de la lógica clásica, este operador devuelve un tipo de dato booleano (true o false).
+
+
+* '!': operador lógico unario de negación. Esta expresión invierte el valor de verdad de la expresión que le sigue. Es decir, si la expresión booleana es verdadero (true), pasa a ser falsa (false), y lo opuesto en el caso contrario. Es decir, al igual que las conectiva de la negación de la lógica clásica, este operador toma un valor de verdad y lo devuelve invertido.
