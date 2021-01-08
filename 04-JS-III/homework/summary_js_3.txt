@@ -1,0 +1,70 @@
+* Arrays: es una lista de elementos que permite almacenar todo tipo de datos, es decir, los elementos que forman el array o arreglo pueden ser integers, strings, booleanos, funciones, arrays, etc. Esta estructura de datos se define del siguiente modo:
+var array = [];
+
+Podemos acceder a cualquier elemento dentro del array con su número de índice que indica la posición en la que está. Entonces si, por ejemplo, definimos un array (siempre separando los distintos elementos con ','), como el siguiente:
+var array = ["Salva", 1, [0, 2, 5, "pez"], False];
+Podemos acceder al string "Salva" señalando entre corchetes la posición que tiene en el array, en este caso [0], dado que en programación siempre que contemos posiciones se empieza desde el 0:
+array[0];
+>"Salva"
+
+En resumen, podemos pensar en los arreglos o arrays como compartimentos tipo lockers de una escuela que nos permiten almacenar cualquier cosa y manipularla facilmente accediendo a ellas a través del número de locker que los identifica. En el caso de los arrays ese número es el índice que indica su posición en la colección.
+
+Asimismo, como podemos almacenar un array adentro de otro, podemos acceder a los elementos del array que se encuentra dentro de otro utilizando la misma notación que acabamos de aprender. Y en nuestro ejemplo:
+array[2][2];
+>5
+
+Además, como los arrays nos permiten acceder a los elementos que están almacenados en él, también podemos usarlos para hacer las mismas operaciones que haríamos con ellos por fuera del array. Por ejemplo:
+array[2][2] + 10;
+>15
+array[0] + " es un buen perro";
+>"Salva es un buen perro"
+
+Los strings son cadenas de caracteres y como tales, son arrays y podemos acceder a cada uno de sus elementos de la misma forma que en estos. Por ejemplo:
+"Laura";
+"Laura"[0];
+>L
+"Laura"[0];
+>a
+"Laura"[0];
+>u
+
+
+Para saber cuantas posiciones tiene el array podemos utilizar el método .length que devuelve el número total de elementos del array, en nuestro ejemplo:
+array.length;
+>4
+Esta propiedad puede ser muy útil si, por ejemplo, queremos acceder al último elemento del array:
+array[array.length-1];
+>False
+Esto equivale a hacer: array[4-1], es decir array[3].  *Recordemos que el índice siempre se empieza a contar desde el 0, por eso es necesario restar 1 a la totalidad de elementos para saber cuál es el índice del último elemento*
+
+
+Podemos agregar y pisar los valores de los elementos del array simplemente con su índice del siguiente modo:
+Entonces si, volvemos a nuestro ejemplo:
+var array = ["Salva", 1, [0, 2, 5, "pez"], False];
+array[0] = 8;
+>array = [8, 1, [0, 2, 5, "pez"], False];
+
+array[5] = "hello";
+>array = [8, 1, [0, 2, 5, "pez"], False, undefined, "hello"];
+Como se puede ver en este último caso, dado que no existe ningún elemento entre la posición array[3] y array[5], el elemento de la posición del medio es undefined, indefinido. Esto ocurrirá en cualquier elemento intermedio en el que no se asigne un valor.
+
+Con la función .push() podemos incluir fácilmente elementos al final del último elemento del array:
+array.push(3);
+>array = [8, 1, [0, 2, 5, "pez"], False, 3];
+
+Con la función .pop() podemos obtener el último elemento del array y sacarlo, eliminarlo del array original. Esto es, si con el indice podemos manipular un dato de un array:
+var num1 = array[4];
+num1
+>3
+Y el array continúa siendo:
+>array = [8, 1, [0, 2, 5, "pez"], False, 3];
+
+Con la función .pop() podemos obtener y elminar del array original un elemento:
+var num2 = array.pop();
+num2;
+>3
+Y el array pasa a ser entonces:
+>array = [8, 1, [0, 2, 5, "pez"], False];
+
+
+Para recorrer los elementos del array podemos usar estructuras iterativas como el 'for' o el 'while'. Esto es creamos una variable que opere como contador y vamos aumentando o disminuyendo su valor para ir recorriendo los diferentes elementos del array.

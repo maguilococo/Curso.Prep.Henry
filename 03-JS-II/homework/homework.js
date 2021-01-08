@@ -68,9 +68,6 @@ function esEntero(numero) {
   if (Number.isInteger(numero)== true) {
     return true;
   }
-  else {
-    return false;
-  }
 }
 
 function fizzBuzz(numero) {
