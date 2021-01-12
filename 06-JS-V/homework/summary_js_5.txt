@@ -1,0 +1,85 @@
+* Prototype: en programación hay lenguajes que se desarrollan bajo lo que se conoce como el Paradigma de Objetos. En pocas palabras, se trata de una cierta estructura a la hora de programar mediante la cual se utilizan los objetos como entidades reales para modelar la realidad. 
+JavaScript no es un lenguaje de programación orientado a objetos, pero posee elementos en su sintáxis análogos a los de JAVA, ya que en el momento de su creación JAVA era un lenguaje muy popular y quisieron incentivar el uso de JS en programadores incluyendo muchos elementos estructurales que se utilizan a la hora de programar en JAVA.
+
+No obstante, JavaScript es un lenguaje de programación cuyo diseño está basado en un prototipo (Prototype), esto es, todos los objetos de JS tienen una referencia a otro objeto llamado prototipo. 
+De allí que cada objeto en JS tiene sus propiedades, y a su vez tiene definido un protipo que tiene un montón de propiedades adentro del constructor de dicho protipo.
+
+Para consultar el prototipo de un objeto podemos ejecutar:
+obj.__proto__
+
+Cuando utilizamos una función constructora lo que estamos haciendo es establecer que el prototipo de todos los objetos que están dentro de esa clase, es el prototipo del constructor. Esto es útil para compartir métodos entre objetos y no tener que crear una nueva función en cada uno. Creando un prototipo puedo fácilmente establecer un método de un conjunto indefinido de objetos dentro de una clase y que, aunque el objeto instanciado no lo tenga definido, pueda acceder a dicho método a través del prototipo. Por ejemplo:
+function MagosHogwarts(edad) {
+	this.edad = edad;
+}
+
+
+MagosHogwarts.prototype.getEdad  function (
+	return this.edad;
+}
+
+var harry = new MagosHogwarts(13);
+
+var hermaione = new MagosHogwarts(12);
+
+Entonces, ahora podemos fácilmente acceder al método desde el objeto porque esa función ha sido definida en el prototype y ahora heredada en el objeto.
+
+harry.getEdad();
+>13
+
+Asimismo, es posible sobreescribir los métodos en cada objeto para darle un comportamiento determinado cuando ese método en convocado sobre ese objeto y en ese caso, utiliza la propiedad desde el objeto y no desde el prototipo Siguiendo nuestro ejemplo:
+
+harry.getEdad = function () {
+	return "Harry es inmoral";
+}
+
+A su vez, esto tiene la ventaja de que si quisieramos modificar un método de un prpototipo basta cambiarlo en un sólo lugar para que se hagan las modificaciones en todos los objetos que tienen a ese prototipo de referencia:
+
+MagosHogwarts.prototype.getEdad = function () {
+	return "Tiene " + this.edad + " años";
+}
+
+Si consultamos una función que no se encuentra ni en las propiedades del objeto, ni en el prototipo del mismo, ni en el prototipo del prototipo (si es que hubiese), y así hasta llegar al último prototipo sin éxito, el compilador arrojará un error ya que no existe ese método definido para ese objeto.
+
+
+* Constructors (de Clases):
+
+Una clase es una plantilla para crear objetos con ciertos datos según un modelo predefinido. Se usan para representar conceptos, como los sustantivos en el lenguaje natural nos permiten clasificar cierto tipo de palabras en un concepto más abstracto. Es decir, la clase es una estructura que nos permite modelar con mayor precisión en un lenguaje artificial elementos del mundo real. Por ejemplo, la clase MagosHogwarts tiene a ron, harry, hermaione que son objetos particulares dentro de la clase MagosHogwarts. Todos los objetos dentro de MagosHogwarts tienen ciertos atributos en común que comparten entre sí y cada uno de ellos es una instancia de la clase MagosHogwarts.
+
+Hasta ahora vimos como crear objetos de forma "literal". Ahora, veremos cómo crear una clase que nos permita diseñar una plantilla para crear objetos que sean todos iguales entre ellos. Para ello utilizaremos Functions Constructors, funciones constructoras de objetos, y la key word 'new'. Entonces, un método constructor se escribe del siguiente modo:
+
+function MagosHogwarts () {
+	this.nombre = "Harry";
+	this.apellido = "Potter";
+}
+
+var harry = new MagosHogwarts();
+console.log(harry);
+
+Hay ciertas convenciones que se establecieron entre todos los programadores a la hora de escribir código para facilitar la identificación de ciertas estructuras. Así, por ejemplo, hay una convención llamada 'Camel Case' que establece que todas las funciones constructoras deben escribirse con la primera letra en mayúscula, por ejemplo: MagosHogwarts(), Mounstruos(), Conjuros().
+
+La función constructora utiliza la keyword this y, como puede observarse, no devuelve ningún dato. Esto es porque la key word this hace varias cosas por detrás que no vemos y entenderemos más adelante. 
+
+La función constructora lo que hace es generar un objeto con los atributos especificados y el key word 'new' lo que hace es instanciar un objeto dentro de la clase. En el ejemplo anterior almacenamos dicho objeto en una variable 'harry'. Entonces, esa variable es un objeto dentro de la clase MagosHogwarts:
+harry
+>MagosHogwarts {nombre: "Harry", apellido: "Potter"}
+
+A diferencia de los objetos literales, al crear objetos con una función constructora podemos identificar la clase del objeto y los atributos que todo objeto de dicha clase posee. Asimismo, al tratarse de una función el método constructor nos permite pasarle argumentos a la función para hacer cosas más sofisticadas a la hora de crear objetos y sus relaciones con otras clases de objetos. Por ejemplo:
+function MagosHogwarts(nombre, apellido, casa) {
+	this.nombre = nombre;
+	this.apellido = apellido;
+	this.casa = casa;
+}
+var harry = new MagosHogwarts("Harry", "Potter", "Gryffindor");
+var hermaione = new MagosHogwarts("Hermaione", "Granger","Gryffindor");
+
+Los objetos creados con el método constructor se comportan de igual modo que los objetos literales. (Es decir, podemos acceder a sus propiedades de igual modo, etc.).
+
+Asimismo, podemos utilizar el operador por defecto, que es el operador lógico de la disyunción, para establecer un valor predeterminado para las propiedades de los objetos que queremos crear con el método constructor. Entonces, si a la hora de crear el objeto no se especifica el atributo, se establecerá por defecto el atributo predeterminado.
+
+function MagosHogwarts(nombre, apellido, casa) {
+	this.nombre = nombre || "a";
+	this.apellido = apellido || "a";
+	this.casa = casa || "Gtyffindor";
+}
+
+Es importante tener en cuenta que existen distintas formas de crear clases con sus propiedades , todas hacen lo mismo y la elección entre ellas depende del cirterio del programador o en su defecto, de la convención a la que se haya llegado con su equipo de trabajo.
