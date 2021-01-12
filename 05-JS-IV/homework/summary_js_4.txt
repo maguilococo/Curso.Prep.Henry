@@ -1,0 +1,127 @@
+* Objetos: es una colección de propiedades. Los objetos nos permiten tener mayores herramientas para describirlo que pasa en el mundo real en lenguajes de programación. Así por ejemplo, mediante los objetos podemos asignar ciertas propiedades que le corresponden a cierta entidad. Por ejemplo, supongamos que queremos crear una lista de todos los personajes de la saga de Harry Potter, añadiendo los biográficas de cada uno. Definir a cada uno de ellos como objetos nos permitirá acceder a cualquiera de los datos biográficos asociados a ellos mediante las propiedades.
+Uno objeto se define así:
+var objeto = {
+	propiedad: valor1;
+	...
+	propiedad: valorN;
+}
+
+var harry = {
+	apellido: "Potter",
+	año_nacimiento: 1981,
+	lugar_nacimiento: "Manchester",
+	escuela: "Hogwarts",
+	profesion: "mago"
+}
+
+
+* Propiedades: es una asociación entre un nombre y un valor (key-value) que están asociadas entre sí a través de objetos. Las propiedades pueden ser cualquier tipo de dato, ya sean números enteros, floats, strings, arrays, funciones, etc..
+
+
+Asimismo podemos agregar nuevas propiedades al objeto  o cambiarlas del siguiente modo:
+harry['anteojos'] = true;
+ó
+harry.anteojos = true;
+
+harry['lugar_nacimiento'] = "London";
+ó
+harry.lugar_nacimiento = "London";
+
+
+Así, es encillo comprobar que un array o arreglo no es otra cosa que un objeto con índices de números, en lugar de propiedades. 
+
+Podemos eliminar fácilmente las propiedades de un objeto a traves de la palabra clave 'delete':
+
+delete harry.anteojos;
+ó 
+delete harry['anteojos'];
+
+
+* Notación de puntos vs notación de corchetes: 
+Como vemos, hay dos formas de acceder a las propiedades de los objetos:
+	-Notación de corchetes: es muy similar a la de los arrays, pero reemplazando el índice númerico por la propiedad que queremos consultar, por ejemplo:
+		harry[escuela];
+		>'Hogwarts'
+	La ventaja de esta notación es que, pese a que es más rebuscada cuando necesitamos tipear, nos permite hacer más cosas como recorrer objetos, acceder a las propiedades a través de variables, etc..
+	-Notación de puntos: al igual que los corchetes, los puntos nos permiten acceder a las propiedades de los objetos, pero esta vez de forma más ágil para tipear, en nuestro ejemplo:
+		harry.escuela;
+		>'Hogwarts'
+	La ventaja de la notación de puntos es que como dijimos es más rápida para escribir. La desventaja es que los puntos únicamente pueden utilizarse para buscar una propiedad definida dentro de un objeto y no, por ejemplo, una variable que remita a esa propiedad. 
+
+* Métodos: cuando las propiedades de un objeto son funciones se llaman 'métodos'. Por ejemplo:
+var conjuros = {
+	levitar: function() {
+			console.log("Levioso");
+		}
+	moverCosas: function() {
+			console.log("Locomotor");
+		}	
+}
+
+La palabra clave (key word) 'This' nos permite hacer referencia al objeto en cuestión en los distintos lugares donde aparece. Esto resulta de muchísima utilidad dado a que nos permite pensar que nuestro código es escalable, es decir, puede usarse en indefinidos casos futuros sin que manualmente tengamos que hacer variaciones en cada caso. Y, de este modo, evita que escribamos más lineas de código para realizar lo mismo que podría hacerse en menos. 
+Por ejemplo, siguiendo con Hogwarts distintos personajes tienen el mismo conjuro para haacerse invisibles. Es decir distintos objetos: harry, ron, hermaione, comparten el mismo método invisibilizarse() y la misma propiedad de ser invisibles. Para que el método sea accesible a todos esos objetos utilizaremos la key word 'this':
+function invisibilizar() {
+	this.invisible = true;
+}
+
+var harry = {
+	anteojos: true,
+	mago: true,
+	invisible: false,
+	invisibilizar: invisibilizar(),
+	saludar: saludar()
+}
+
+var ron = {
+	invisible: false,
+	invisibilizar: invisibilizar();
+}
+
+var hermaione = {
+	invisible: false,
+	invisibilizar: invisibilizar();
+}
+
+Así, cuando llamamos el método en cada objeto, cambiaremos la propiedad de invisible a true.
+
+harry.invisibilizar();
+
+Y, para comprobar que Harry efectivamente se volvió invisible podemos tipear:
+conosole.log(harry.invisible);
+>true
+
+Lo mismo sucede con cada objeto que tenga ese método como propiedad y ejecute esa función:
+ron.invisibilizar();
+
+No obstante, si llamamos a la función sin especificar el objeto desde el cual se ejecuta la consola arrojará 'undefined', dado a que la key word 'this' sólo puede reemplazarse por objetos que tengan a dicha función como propiedad, es decir, como método.
+
+invisibilizar();
+>undefined
+
+
+De esta forma, vemos que nuestro código se vuelve escalable, ya que no hace falta que volvamos a crear una función invisibilizar en cada objeto, sino que podemos utilizar la misma función sean la cantidad de objetos (magos) que existan.
+
+* Bucle for…in: para poder iterar sobre los valores de las propiedades de los objetos podemos utilizar la expresión 'for' similarmente a como la utilizamos para los arrays. Sin embargo, como en este caso los objetos no necesariamente tienen números como índices, el bucle estándar que aumentando la variable contador nos permitía ir variando el índice del array y, por consiguiente ir iterando sobre los elementos del array no nos permitirá recorrer las propiedades del objeto. Por ello, utilizamos la expresión "for ... in loop", que lleva entre paréntesis la declaración de una variable, la palabra clave in y el nombre del objeto sobre el que queremos iterar:
+
+var harry = {
+	anteojos: true,
+	mago: true,
+	invisible: false,
+	invisibilizar: invisibilizar()
+}
+
+for (let key in harry){
+    console.log(key);
+    console.log(harry[key]);
+}
+
+>	anteojos
+>	true
+>	mago
+>	true
+>	invisible
+>	false
+>	invisibilizar
+>	undefined
+
+De este modo, vemos que se han recorrido todas las propiedades (key o claves) del objeto. Y, así, si quisieramos acceder al valor asociado con una key, basta con poner el nombre del objeto con esa clave entre corchetes. 
