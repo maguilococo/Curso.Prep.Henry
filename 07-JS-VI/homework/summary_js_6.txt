@@ -1,0 +1,24 @@
+* Funciones Callback:
+	Como ya hemos señalado, no todos los lenguajes de programación son iguales, y, veremos a continuación que JavaScript tiene la particularidad de tratar a las dunciones como "first class", esto es, las funciones pueden pasarse como argumentos a otras funciones, devolverse como resultado de una función y guardarlas en variables u otras estructuras de datos.
+	Una función se llama "Callback" cuando recibe como argumentos a otra función. Veamos un ejemplo para comprender de que se trata. Volviendo a los hechizos de Harry Potter, hay uno de ellos muy común entre los magos de Hogwarts que permite hacer elevar objetos pequeños o livianos. Asimismo, existe un hecizo de invisibilizar que permite invisibilizar objetos y personas. Definirmemos ambas funciones de forma tal que devuelvan true una vez que las palabras se han pronunciado y utilizaremos una función callback de JavaScript para emular ambos el efecto de las varitas de ambos hechizos que indican que el conjuro ya se ha desencadenado:
+//Creamos la función wingardiumLeviosa que permite elevar objetos pequeños:
+function wingardiumLeviosa(algo) {
+  console.log("Wingardium Leviosa!!")
+  return true;
+}
+
+//Creamos la función invisibilizar que permite hacer invisible a objetos y personas:
+function invisibilizar(algo) {
+  console.log("Invisibilidad!!")
+  return true;
+}
+
+//Ahora crearemos una función callback que se llamará hechizoRealizado que comprobará si el hechizo se ha pronunciado y anunciará con el efecto de la varita, que el conjuro ya se ha desencadenado.
+function hechizoRealizado (algo, cb) {
+  cb(algo);
+  return console.log("✨✨");
+
+}
+
+hechizoRealizado('mesa', invisibilizar);
+hechizoRealizado('mesa', wingardiumLeviosa);
