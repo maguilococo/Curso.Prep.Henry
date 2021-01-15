@@ -1,0 +1,92 @@
+/*E. Agregue una regla de estilo a su elemento h1 cambiando el color del texto (Listado de colores: https://www.crockford.com/wrrrld/color.html).
+  F. Agregue una regla de estilo al elemento img dándole un ancho de 400px.
+  G. Agregue una regla de estilo a 'thirdDiv' cambiando la altura a 600px y el ancho a 500px.
+  H. Agregue una regla de estilo a 'thirdDiv' cambiando el color de fondo por el que quiera.
+  I. Cambie el tamaño de la fuente para 'spanId' a 18px.
+  J. Asignar al id 'spanId' un margen de 50px.
+  K. Asignar al id 'thirdDiv' un relleno (padding) de 50px.
+  L. Asignar al id 'thirdDiv' un borde con cualquier ancho de color y estilo que elija.*/
+
+html {
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
+
+body {
+	font-family: Ubuntu;
+	background-image: url('https://www.ilovewallpaper.co.uk/images/texture-plain-glitter-wallpaper-beige-p2627-9126_image.jpg');
+    background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+  	width: 100vw;
+  	color: dimgray;
+  	text-align: center;
+}
+
+div {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+  	margin: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+	color: darkolivegreen;
+	text-shadow: 0px 2px 3px #B0B0B4;
+}
+
+img {
+	width: 400px;
+	display: block;
+	margin: 20px;
+}
+
+a, a:hover {
+	text-decoration: none;
+	display: block;
+	margin: 20px;
+	font-size: 19px;
+}
+
+a {
+	font-weight: 500;
+	color: dimgray;
+}
+
+a:hover {
+    font-weight: 800;
+    color: darkolivegreen;
+}
+
+.title {
+	color: sienna;
+	font-size: 60px;
+	text-shadow: 0px 2px 3px #B0B0B4;
+	margin: unset;
+}
+
+.divClass {
+	padding: 10px;
+}
+
+#thirdDiv {
+	height: 600px;
+	width: 500px;
+	background-color: ivory;
+	padding: 50px;
+	border: none;
+	box-shadow: 0 0 15px 0 #B0B0B4;
+    text-align: center;
+    justify-content: center;
+}
+
+#spanId {
+	display: block;
+	font-size: 18px;
+	margin: 50px; 
+}
