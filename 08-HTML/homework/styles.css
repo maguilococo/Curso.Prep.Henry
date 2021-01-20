@@ -19,16 +19,15 @@ body {
   	background-attachment: fixed;
   	background-size: cover;
   	width: 100vw;
-  	color: dimgray;
-  	text-align: center;
 }
 
-div {
-    display: block;
-    align-items: center;
+.box {
+    display: flex;
+  	flex-direction: column;
+  	align-items: center;
     justify-content: center;
-    max-width: 500px;
-  	margin: auto;
+  	text-align: center;
+  	color: dimgray;
 }
 
 ul {
@@ -72,6 +71,9 @@ a:hover {
 
 .divClass {
 	padding: 10px;
+	display: block;
+    max-width: 500px;
+  	margin: auto;
 }
 
 #thirdDiv {
