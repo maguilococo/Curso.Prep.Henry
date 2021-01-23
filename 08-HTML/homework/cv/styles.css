@@ -1,0 +1,111 @@
+/*___BODY__*/
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;	
+}
+
+/*__NAVBAR__*/
+.navbar {
+    letter-spacing: 0.07em;
+}
+
+.nav-link {
+    text-align: right;
+    color: #3668A9 !important;
+}
+
+.nav-link:hover {
+  font-weight: 600;
+}
+
+.text-about {
+	color: white !important;
+}
+
+.button-about {
+    background-color: #182E4B;
+    border-radius: 10px;
+    padding: 1px 4px;
+}
+
+/*__DESCRIPTION__*/
+
+#img-me {
+  width: 50%;
+}
+
+/*___STUDIES___*/
+.logo {
+  width: 0.7in;
+  height: 0.7in;
+}
+
+.uba {
+  width: 0.8in;
+  height: 0.8in;
+}
+
+#cookies-logo {
+	width: 10%;	
+}
+
+.center, .center:hover {
+  color: #182E4B !important;
+
+}
+
+.study, .study:hover, a {
+  color: #3668A9 !important;
+}
+
+
+/*___FOOTER___*/
+.contact {
+  width: 5rem;  
+}
+
+#emoji-heart {
+  width: 2.2%;
+  height: 2.2%;
+}
+
+.by-footer, #name-footer {
+  font-size: 0.9em;
+}
+
+#name-footer {
+  color: rgb(83, 191, 241);
+  font-weight: 500;
+
+}
+
+/*____TYPOGRAPGHY____*/
+
+h2 {
+    color: #182E4B !important;
+    text-shadow: 0.07rem 0.07rem 0rem #B0B0B4;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+a:hover {
+    text-decoration: none;    
+}
+
+hr {
+  border-top: 0.1em solid #3668A9;  
+}
+
+.text-center {
+    text-align: center!important;
+}

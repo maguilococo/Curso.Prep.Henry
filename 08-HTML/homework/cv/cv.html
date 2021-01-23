@@ -14,7 +14,10 @@ Subir también este archivo a su repositorio de github -->
 <!DOCTYPE html>
 <html lang="es">
     <head>
-    	<title>Home</title>
+    	<title>About</title>
+		
+		<link rel="icon" type="image/svg" href="assets/programming.svg">
+
       <!-- style.css -->
       	<link rel = "stylesheet" href = "./styles.css" />
 
@@ -25,20 +28,267 @@ Subir también este archivo a su repositorio de github -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>    
     <body>
-      <div class="container mt-5 pb-5">
-          <h2 class="pt-5 about"> About me </h2>
-          <div class="row pt-3 no-gutters">
-            <div class="col-md-4">
-              <img id="img-me" src="https://raw.githubusercontent.com/maguilococo/portfolio/master/images/me.jpg" class="img-fluid float-left" alt="Responsive image">
+    	<header>
+			<nav class="navbar navbar-expand-lg navbar-light shadow p-2 mb-5 bg-white rounded justify-content-end fixed-top navbar-custom">
+		     	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		        	<span class="navbar-toggler-icon"></span>
+		      	</button>
+		    	<div class="collapse navbar-collapse" id="navbarNav">
+		        	<ul class="navbar-nav ml-auto">
+		            	<li class="nav-item active button-about">
+		            		<a class="nav-link text-about" href="#about">About <span class="sr-only">(current)</span></a>
+		             	</li>
+		             	<li class="nav-item">
+		               		<a class="nav-link" href="#studies">Conocimientos</a>
+		             	</li>
+		             	<li class="nav-item">
+		               		<a class="nav-link" href="#skills">Skills</a>
+		             	</li>
+		             	<li class="nav-item">
+		               		<a class="nav-link" href="#jobs">Experiencias</a>
+		             	</li>
+		             	<li class="nav-item">
+		               		<a class="nav-link" href="#henry">Henry</a>
+		             	</li>
+		             	<li class="nav-item">
+		               		<a class="nav-link" href="#contact">Contacto</a>
+		             	</li>
+		           	</ul>
+		        </div>
+			</nav> 
+		</header>
+		<div class="container pt-5 pb-5 box" id="about">
+        	<div class="row pt-5">
+          		<div class="col-6 pt-5">
+            		<h2 class="text-center pt-5">&lt;Magdalena Lococo/&gt;</h2>
+            		<h3 class="mt-3 text-center"><small>Programadora en construcción, amante de la Filosofía y del queso.</small></h3>
+          		</div>
+          		<div class="col-6 pt-5">
+          			<img id="img-me" src="https://raw.githubusercontent.com/maguilococo/portfolio/master/images/me.jpg" class="rounded mx-auto d-block" alt="Responsive image">
+          		</div>
+        	</div>
+      	</div>
+
+
+      	<div class="container pt-5 pb-5 studies" id="studies">
+      		<h2 class="pt-5 about">Conocimientos</h2>
+      		<hr>
+        	<div class="media pt-2">
+	        	<a class="center" href="http://www.uba.ar/" target="_blank">
+	            	<img src="https://raw.githubusercontent.com/maguilococo/portfolio/master/images/UBA-01.svg" class="mr-3 logo uba" alt="Generic placeholder image">
+	          	</a>
+	        	<div class="media-body">
+	        		<a class="center" href="http://www.uba.ar/" target="_blank">
+	            		<h3 class="mt-0 center">Universidad de Buenos Aires</h3>
+	            	</a>
+	            	<h4 class="mt-0 study"><a class="type" href="http://filosofia.filo.uba.ar/" target="_blank">Licenciatura en Filosofía</a></h4>
+	            	<h5>2016 - 2022</h5>
+	            	<p>
+	              		- Filosofía de la Lógica <br>
+	              		- Filosofía del lenguaje <br>
+	              		- Teconología.
+	            	</p>
+	        	</div>
+		  	</div>
+     		<div class="media pt-2">
+      			<a class="center" href="https://www.harvard.edu/" target="_blank">
+            		<img src="https://raw.githubusercontent.com/maguilococo/portfolio/master/images/harvard-logo.svg" class="mr-3 logo" alt="Generic placeholder image">
+        		</a>
+        		<div class="media-body">
+        			<a class="center" href="https://www.harvard.edu/" target="_blank">
+                		<h3 class="mt-0 center">Harvard University</h3>
+            		</a>
+            		<h4 class="mt-0 study"><a class="type" href="https://cs50.harvard.edu/x/2020/" target="_blank">CS50x Introduction to Computer Science</a></h4>
+            		<h5>2020</h5>
+            		<p>
+           				- C: Algorithms, Memory Allocation, Data Structures <br>
+                		- SQLite3: CDRUD operations <br>
+                		- Python: Data Structures, SQLite3 <br>
+                		- Web Design: HTML, Css, JavaScript
+            		</p>
+        		</div>
+      		</div>
+      		<div class="media pt-2">
+      			<a class="center" href="https://www.buenosaires.gob.ar/educacion/agencia-de-aprendizaje-a-lo-largo-de-la-vida/formacion-profesional" target="_blank">
+        			<img src="https://raw.githubusercontent.com/maguilococo/portfolio/master/images/cfp.png" class="mr-3 logo" alt="Generic placeholder image">
+        		</a>
+      			<div class="media-body">
+        			<a class="center" href="https://www.buenosaires.gob.ar/educacion/agencia-de-aprendizaje-a-lo-largo-de-la-vida/formacion-profesional" target="_blank">  
+            			<h3 class="mt-0 center">Centro de Formación Profesional N° 8</h3>
+            		</a>
+            		<h4 class="mt-0 study"><a class="type" href="http://www.centro8smata.org.ar/cursos.html#3" target="_blank">Programación - JAVA</a></h4>
+            		<h5>2019 - 2020</h5>
+            		<p>
+            			- Técnicas de Programación <br>
+                		- Base de Datos (SQL) <br>
+                		- Relaciones Laborales y Orientación Profesional <br>
+                		- Programación Orientada a Objetos (JAVA)
+            		</p>
+        		</div>
+      		</div>
+      		<div class="media pt-2">
+          		<a class="center" href="https://www.urjc.es/" target="_blank">
+            		<img src="https://raw.githubusercontent.com/maguilococo/portfolio/master/images/Logo_URJC.svg.png" class="mr-3 logo" alt="Generic placeholder image">
+          		</a>
+          		<div class="media-body">
+          			<a class="center" href="https://www.urjc.es/" target="_blank">
+            			<h3 class="mt-0 center">Universidad Rey Juan Carlos</h3>
+            		</a>
+            		<h4 class="mt-0 study"><a class="type" href="https://www.urjc.es/estudios/grado/2450-filosofia" target="_blank">Grado en Filosofía</a></h4>
+            		<h5>2017 - 2018</h5>
+            		<p>
+            			- Intercambio académico
+            		</p>
+          		</div>
+      		</div>
+    	</div>
+
+    	<div class="container-fluid pb-4" id="skills">
+            <div class="row pt-4 ml-5">
+                <div class="col-md pt-5">
+                    <h2 class="title-project">Skills</h2>
+                    <hr>
+                </div>
             </div>
+            <div class="row justify-content-center p-5">
+                <div class="col-md pb-4">
+                    <img src="assets/java.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">
+                </div>
+                <div class="col-md pb-4">
+                    <img src="assets/html.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">
+                </div>
+                <div class="col-md pb-4">
+                    <img src="assets/css.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">
+                </div>
+                <div class="col-md pb-4">
+                    <img src="assets/javascript.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">
+                </div>
+                <div class="col-md pb-4">
+                    <img src="assets/C.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">
+                </div>
+                <div class="col-md pb-4">
+                    <img src="assets/mysql.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">
+                </div>
+                <div class="col-md pb-4">
+                    <img src="assets/sql.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">
+                </div>
+                <div class="col-md pb-4">
+                    <img src="assets/python.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">
+                </div>
+            </div>
+        </div>
+
+    	<div class="container pt-5 pb-5 studies" id="jobs">
+      		<h2 class="pt-5 about">Experiencias</h2>
+      		<hr>
+      		<div class="media pt-2">
+	        	<a class="center" href="https://rolodeco.negocio.site/" target="_blank">
+	            	<img src="https://media.istockphoto.com/vectors/parking-sign-line-vector-icons-vector-id1126432282?b=1&k=6&m=1126432282&s=170x170&h=zGqr7Dp4JZrKxSiJ6sk-D_ZTY-uQCKanamKLBS64V-k=" class="mr-3 logo uba" alt="Generic placeholder image">
+	          	</a>
+	        	<div class="media-body">
+	        		<a class="center" href="https://rolodeco.negocio.site/" target="_blank">
+	            		<h3 class="mt-0 center">Rolodeco S.A.</h3>
+	            	</a>
+	            	<h4 class="mt-0 study"><a class="type" href="https://rolodeco.negocio.site/" target="_blank">Encargada</a></h4>
+	            	<h5>ago. 2018 - dic. 2020</h5>
+	            	<p>
+	            		- Administrativa<br>
+	            		- Encargada del personal del estacionamiento.<br>
+	            		- Atención al cliente<br>
+	            		- Cajera
+	            	</p>
+	        	</div>
+		  	</div>
+        	<div class="media pt-2">
+	        	<a class="center" href="https://www.cookies-dreams.es/" target="_blank">
+	            	<img src="https://instagram.faep9-1.fna.fbcdn.net/v/t51.2885-19/s150x150/18812422_427474674302334_3764494111449546752_a.jpg?_nc_ht=instagram.faep9-1.fna.fbcdn.net&_nc_ohc=nW73eF3fN_UAX_t7hT3&tp=1&oh=b8b3e369a87e840c61b38d0256e0fe01&oe=6034C793" class="mr-3 logo uba" alt="Generic placeholder image">
+	          	</a>
+	        	<div class="media-body">
+	        		<a class="center" href="https://www.cookies-dreams.es/" target="_blank">
+	            		<h3 class="mt-0 center">Cookies & Dreams</h3>
+	            	</a>
+	            	<h4 class="mt-0 study"><a class="type" href="https://www.cookies-dreams.es/" target="_blank">Dependiente de tienda</a></h4>
+	            	<h5>ene. 2018 - jun. 2018 - Madrid, España</h5>
+	            	<p>
+	            		- Atención al cliente en español, italiano e inglés<br>
+	            		- Recepción de mercadería<br>
+	            		- Manejo y arqueo de caja
+	            	</p>
+	        	</div>
+		  	</div>
+        	<div class="media pt-2">
+	        	<a class="center" href="https://www.linkedin.com/company/eneldo-mercado-natural/about/" target="_blank">
+	            	<img src="https://media-exp1.licdn.com/dms/image/C4E0BAQG-tOMaG78TEQ/company-logo_200_200/0/1519862093894?e=1619654400&v=beta&t=XGSPc7_c_bkKCt5-Xh4Z1tAt4Pl7x0pQ_HeN56P1gfA" class="mr-3 logo uba" alt="Generic placeholder image">
+	          	</a>
+	        	<div class="media-body">
+	        		<a class="center" href="https://www.linkedin.com/company/eneldo-mercado-natural/about/" target="_blank">
+	            		<h3 class="mt-0 center">ENELDO | Mercado Natural</h3>
+	            	</a>
+	            	<h4 class="mt-0 study"><a class="type" href="https://www.linkedin.com/company/eneldo-mercado-natural/about/" target="_blank">Dependiente de tienda</a></h4>
+	            	<h5>feb. 2017 - agos. 2017</h5>
+	            	<p>
+	            		- Atención al cliente<br>
+	            		- Entrenadora de nuevos empleados<br>
+	            		- Actualización de base de datos de mercadería.
+	            	</p>
+	        	</div>
+		  	</div>
+        	<div class="media pt-2">
+	        	<a class="center" href="https://www.linkedin.com/company/kfc/" target="_blank">
+	            	<img src="https://media-exp1.licdn.com/dms/image/C4E0BAQFY5vf3SndheQ/company-logo_200_200/0/1533052317293?e=1619654400&v=beta&t=b7g7P0cKA9Hjt6OjAF5DafD4xLD09EWudV-hqxHDshg" class="mr-3 logo uba" alt="Generic placeholder image">
+	          	</a>
+	        	<div class="media-body">
+	        		<a class="center" href="https://www.linkedin.com/company/kfc/" target="_blank">
+	            		<h3 class="mt-0 center">Kentucky Fried Chicken</h3>
+	            	</a>
+	            	<h4 class="mt-0 study"><a class="type" href="https://www.linkedin.com/company/kfc/" target="_blank">Dependiente de tienda</a></h4>
+	            	<h5>abr. 2016 - jul. 2016</h5>
+	            	<p>
+	            		- Atención al cliente en español, italiano e inglés<br>
+	              		- Cajera
+	            	</p>
+	        	</div>
+		  	</div>
+    	</div>
+
+    	<div class="container mt-5 pb-5" id="#henry">
+          <div class="row pt-3 no-gutters">
             <div class="col-md-8">
-              <h2 class="text-justify hello mt-5"> Hola! Soy Magui,</h2>
-              <p class="text-justify mt-3 description-about"> Soy programadora autodidácta y estudio Filosofía en la UBA.<br>
-                  Me interesa formarme en el área de Fenomenología, Lógica y Tecnología.<br>
-                  Me gusta molestar a mi perro, viajar y los memes.
+              <h2 class="text-justify hello mt-5"> ¿Por qué Web Development?</h2>
+              <p class="text-justify mt-3 description-about"> Soy estudiante de programación autodidácta y de Filosofía en la Universidad de Buenos Aires.<br>
+                Estudio Full Stack Web Development porque quiero tener la oportunidad de crear herramientas innovadoras.<br>
+                Al finalizar la carrera quiero encontrar un equipo de trabajo donde poner en práctica todo lo aprendido.<br>
+                Además, quiero seguir especializándome en el Área de Lógica, donde fusionar mis conocimientos en ciencias computacionales y filosofía.
               </p>
             </div>
           </div>    
         </div>
-    </body>
+
+	    <div class="container pt-5 pb-5" id="contact">
+	      <div class="row justify-content-center">
+	        <div class="col-md-2 mt-4">
+	          <a target="_blank" href="mailto:magdalenalococo@gmail.com">
+	              <img id="mail-contact" src="assets/close_mail_footer.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">  
+	          </a>
+	        </div>
+	        <div class="col-md-2 mt-4">
+	          <a target="_blank" href="https://www.linkedin.com/in/magdalenalococo/">
+	            <img id="linkedin-contact" src="assets/linkedin_footer.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">  
+	          </a>
+	        </div>
+	        <div class="col-md-2 mt-4">
+	          <a target="_blank" href="https://github.com/maguilococo">
+	            <img id="git-contact" src="assets/git_footer.svg" class="img-fluid mx-auto d-block contact" alt="Responsive image">  
+	          </a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="container pt-3 pb-3">
+	      <p class="text-center by-footer">
+	        By <span id="name-footer"> Magui Lococo </span> con 
+	        <img id="emoji-heart" src="assets/heart_emoji.svg" class="img-fluid" alt="Responsive image">
+	      </p>
+	    </div>
+
+	</body>
 </html>
