@@ -145,7 +145,7 @@ a, a:hover {
 }
 
 hr {
-  border-top: 0.1em solid indigo;  
+  border-top: 0.1em solid  #999999;  
 }
 
 .text-center {
