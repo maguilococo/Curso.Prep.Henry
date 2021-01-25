@@ -1,6 +1,32 @@
+html {
+    font-size: 1rem;
+}
+  
+@include media-breakpoint-up(sm) {
+    html {
+      font-size: 1.2rem;
+    }
+}
+  
+@include media-breakpoint-up(md) {
+    html {
+      font-size: 1.4rem;
+  }
+}
+  
+@include media-breakpoint-up(lg) {
+    html {
+      font-size: 1.6rem;
+  }
+}
+
+
 /*___BODY__*/
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: Montserrat !important;
+    background-color: #E6E6E6 !important;
+    color: #000000;
+
 }
 
 .box {
@@ -12,32 +38,39 @@ body {
 
 /*__NAVBAR__*/
 .navbar {
-    letter-spacing: 0.07em;
+    letter-spacing: 0.03em;
+    background-color: #E6E6E6 !important;
 }
 
 .nav-link {
+	color: #1a1a1a;
     text-align: right;
-    color: #3668A9 !important;
+    margin: auto 10px;
 }
 
 .nav-link:hover {
   font-weight: 600;
 }
 
-.text-about {
-	color: white !important;
-}
-
 .button-about {
-    background-color: #182E4B;
+    background-color: #FF4D2F;
     border-radius: 10px;
     padding: 1px 4px;
+}
+
+#text-about {
+	color: #E6E6E6 !important;
 }
 
 /*__DESCRIPTION__*/
 
 #img-me {
   width: 50%;
+}
+
+#name {
+	color: #FF4D2F !important;
+    letter-spacing: 0.05em;
 }
 
 /*___STUDIES___*/
@@ -56,14 +89,19 @@ body {
 }
 
 .center, .center:hover {
-  color: #182E4B !important;
-
+  	font-weight: 800;
+  	font-size: 1.2em !important;
 }
 
-.study, .study:hover, a {
-  color: #3668A9 !important;
+.study, .study:hover {
+	font-size: 1.1em !important;
+	font-weight: 700;
 }
 
+/*__HENRY__*/
+#whyHenry {
+	color: #FF4D2F !important;
+}
 
 /*___FOOTER___*/
 .contact {
@@ -80,7 +118,7 @@ body {
 }
 
 #name-footer {
-  color: rgb(83, 191, 241);
+  color: #FF4D2F;
   font-weight: 500;
 
 }
@@ -88,22 +126,26 @@ body {
 /*____TYPOGRAPGHY____*/
 
 h2 {
-    color: #182E4B !important;
     text-shadow: 0.07rem 0.07rem 0rem #B0B0B4;
-    letter-spacing: 0.05em;
-    font-weight: 600;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em;
 }
 
-h3 {
-    font-size: 1.5em;
+h3, h4 {
+    color: #1a1a1a !important;
 }
 
-a:hover {
+h5 {
+	font-size: 1em !important;
+}
+
+a, a:hover {
     text-decoration: none;    
+    color: #000000 !important;
 }
 
 hr {
-  border-top: 0.1em solid #3668A9;  
+  border-top: 0.1em solid indigo;  
 }
 
 .text-center {

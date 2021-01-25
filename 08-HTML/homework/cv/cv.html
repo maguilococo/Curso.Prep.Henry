@@ -26,17 +26,20 @@ Subir también este archivo a su repositorio de github -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     </head>    
     <body>
     	<header>
-			<nav class="navbar navbar-expand-lg navbar-light shadow p-2 mb-5 bg-white rounded justify-content-end fixed-top navbar-custom">
+			<nav class="navbar navbar-expand-lg shadow p-2 mb-5  rounded justify-content-end fixed-top navbar-custom">
 		     	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		        	<span class="navbar-toggler-icon"></span>
 		      	</button>
 		    	<div class="collapse navbar-collapse" id="navbarNav">
 		        	<ul class="navbar-nav ml-auto">
-		            	<li class="nav-item active button-about">
-		            		<a class="nav-link text-about" href="#about">About <span class="sr-only">(current)</span></a>
+		            	<li class="nav-item active">
+		            		<a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
 		             	</li>
 		             	<li class="nav-item">
 		               		<a class="nav-link" href="#studies">Conocimientos</a>
@@ -50,8 +53,8 @@ Subir también este archivo a su repositorio de github -->
 		             	<li class="nav-item">
 		               		<a class="nav-link" href="#henry">Henry</a>
 		             	</li>
-		             	<li class="nav-item">
-		               		<a class="nav-link" href="#contact">Contacto</a>
+		             	<li class="nav-item  button-about">
+		               		<a class="nav-link" id="text-about" href="#contact">Contacto</a>
 		             	</li>
 		           	</ul>
 		        </div>
@@ -60,7 +63,7 @@ Subir también este archivo a su repositorio de github -->
 		<div class="container pt-5 pb-5 box" id="about">
         	<div class="row pt-5">
           		<div class="col-6 pt-5">
-            		<h2 class="text-center pt-5">&lt;Magdalena Lococo/&gt;</h2>
+            		<h2 class="text-center pt-5" id="name">&lt;Magdalena Lococo/&gt;</h2>
             		<h3 class="mt-3 text-center"><small>Programadora en construcción, amante de la Filosofía y del queso.</small></h3>
           		</div>
           		<div class="col-6 pt-5">
@@ -99,7 +102,7 @@ Subir también este archivo a su repositorio de github -->
                 		<h3 class="mt-0 center">Harvard University</h3>
             		</a>
             		<h4 class="mt-0 study"><a class="type" href="https://cs50.harvard.edu/x/2020/" target="_blank">CS50x Introduction to Computer Science</a></h4>
-            		<h5>2020</h5>
+            		<h5>2020 - 2021</h5>
             		<p>
            				- C: Algorithms, Memory Allocation, Data Structures <br>
                 		- SQLite3: CDRUD operations <br>
@@ -143,8 +146,9 @@ Subir también este archivo a su repositorio de github -->
       		</div>
     	</div>
 
-    	<div class="container-fluid pb-4" id="skills">
-            <div class="row pt-4 ml-5">
+
+    	<div class="container pb-4" id="skills">
+            <div class="row pt-4">
                 <div class="col-md pt-5">
                     <h2 class="title-project">Skills</h2>
                     <hr>
@@ -251,14 +255,14 @@ Subir también este archivo a su repositorio de github -->
 		  	</div>
     	</div>
 
-    	<div class="container mt-5 pb-5" id="#henry">
+    	<div class="container mt-5 pb-5" id="henry">
           <div class="row pt-3 no-gutters">
             <div class="col-md-8">
-              <h2 class="text-justify hello mt-5"> ¿Por qué Web Development?</h2>
-              <p class="text-justify mt-3 description-about"> Soy estudiante de programación autodidácta y de Filosofía en la Universidad de Buenos Aires.<br>
-                Estudio Full Stack Web Development porque quiero tener la oportunidad de crear herramientas innovadoras.<br>
-                Al finalizar la carrera quiero encontrar un equipo de trabajo donde poner en práctica todo lo aprendido.<br>
-                Además, quiero seguir especializándome en el Área de Lógica, donde fusionar mis conocimientos en ciencias computacionales y filosofía.
+              <h2 class="text-justify m5" id="whyHenry">¿Por qué Henry?</h2>
+              <p class="text-justify mt-4"> Soy estudiante de programación autodidácta y de Filosofía en la Universidad de Buenos Aires.<br>
+                Hace tiempo que quiero dar un giro profesional y, de allí que empecé a formarme por mi cuenta en distintos lenguajes de programación. Sin embargo, notaba que para acceder a una formación que realmente hiciera la diferencia necesitaba disponer de grandes fondos y, de hecho, gran parte de la iniciativa que me lleva a querer dar un vuelco a mi carrera estaba relacionada con mejorar mi situación financiera. <br>
+                Cuando me hablaron de Henry entendí que era la oportunidad perfecta: una academia excelente para formarme como Full Stack Developer, que está dispuesta a invertir en mi educación y se compremete en que alcancemos juntos mi principal objetivo: encontrar mi primer empleo IT.<br>
+                Al terminar la carrera espero poder poner en práctica todo lo aprendido y seguir especializándome en el Área de Lógica, donde fusionar mis conocimientos en ciencias computacionales y filosofía.
               </p>
             </div>
           </div>    
